@@ -9,9 +9,7 @@ import java.sql.SQLException;
 
 
 public class JdbcTools {
-    private static  String urldb;
-    private static String userdb;
-    private static String passworddb;
+    private static final String urldb;
 
     static {
 
@@ -21,15 +19,13 @@ public class JdbcTools {
             e.printStackTrace();
         }
         urldb = Settings.getProperty("urldb");
-        userdb = Settings.getProperty("userdb");
-        passworddb = Settings.getProperty("passworddb");
     }
 
 
 
     public static Connection getConnection() throws SQLException{
         //Connection connection = DriverManager.getConnection(urldb);
-        Connection connection = DriverManager.getConnection(urldb, userdb, passworddb);
+        Connection connection = DriverManager.getConnection(urldb);
 
         return connection;
     }
