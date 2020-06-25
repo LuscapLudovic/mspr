@@ -25,6 +25,7 @@ public class EquipementManager {
 
         try{
             equipements = dao.selectAll();
+            System.out.println(equipements);
         } catch (DALException e){
             e.printStackTrace();
             throw new BLLException("Erreur récupération catalogue", e);

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class EquipementDAOJdbcImpl implements DAO {
 
-    public static final String selectAll = "SELECT id, libelle from equipement";
+    public static final String selectAll = "SELECT * from equipement";
 
     @Override
     public List<Equipement> selectAll() throws DALException {
@@ -30,7 +30,7 @@ public class EquipementDAOJdbcImpl implements DAO {
 
             while (rs.next()){
                 eqp = new Equipement(rs.getInt("id"),
-                                    rs.getString("equipement"));
+                                    rs.getString("libelle"));
                 liste.add(eqp);
             }
         } catch (SQLException e) {
