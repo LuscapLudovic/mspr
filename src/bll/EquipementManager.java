@@ -11,6 +11,10 @@ public class EquipementManager {
 
     private static DAO dao;
 
+    /**
+     *
+     * @throws BLLException
+     */
     public EquipementManager() throws BLLException{
         dao = DAOFactory.getEquipementDAO();
     }
@@ -25,7 +29,7 @@ public class EquipementManager {
 
         try{
             equipements = dao.selectAll();
-            System.out.println(equipements);
+            System.out.println(equipements.toString());
         } catch (DALException e){
             e.printStackTrace();
             throw new BLLException("Erreur récupération catalogue", e);

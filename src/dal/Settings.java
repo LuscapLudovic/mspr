@@ -14,6 +14,11 @@ public class Settings {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     public static String getProperty(String key){
         String parametre = properties.getProperty(key,null);
         return parametre;
