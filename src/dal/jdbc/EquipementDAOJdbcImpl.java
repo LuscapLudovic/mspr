@@ -28,6 +28,7 @@ public class EquipementDAOJdbcImpl implements DAO {
             rs = rqt.executeQuery(selectAll);
             Equipement eqp = null;
 
+            System.out.println("Liste des équipements : \n");
             while (rs.next()){
                 eqp = new Equipement(rs.getInt("id"),
                                     rs.getString("libelle"));

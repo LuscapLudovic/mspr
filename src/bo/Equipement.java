@@ -48,8 +48,6 @@ public class Equipement {
 
     @Override
     public String toString() {
-        return "Equipement{" +
-                "libelle='" + libelle + '\'' +
-                '}';
+        return  "libelle = " + libelle + "\n";
     }
 }
