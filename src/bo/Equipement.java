@@ -45,4 +45,11 @@ public class Equipement {
     public void setLibelle(String libelle) {
         this.libelle = libelle;
     }
+
+    @Override
+    public String toString() {
+        return "Equipement{" +
+                "libelle='" + libelle + '\'' +
+                '}';
+    }
 }

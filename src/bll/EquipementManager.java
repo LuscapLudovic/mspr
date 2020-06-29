@@ -1,6 +1,5 @@
 package bll;
 
-import bo.Equipement;
 import dal.DALException;
 import dal.DAO;
 import dal.DAOFactory;
@@ -21,11 +20,10 @@ public class EquipementManager {
 
     /**
      *
-     * @return
      * @throws BLLException
      */
-    public List<Equipement> getEquipement() throws BLLException{
-        List<Equipement> equipements = null;
+    public void getEquipement() throws BLLException{
+        List equipements = null;
 
         try{
             equipements = dao.selectAll();
@@ -34,6 +32,5 @@ public class EquipementManager {
             e.printStackTrace();
             throw new BLLException("Erreur récupération catalogue", e);
         }
-        return equipements;
     }
 }
